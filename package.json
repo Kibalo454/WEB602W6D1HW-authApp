@@ -1,0 +1,30 @@
+{
+  "name": "web602w6d1hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kibalo454/WEB602W6D1HW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kibalo454/WEB602W6D1HW/issues"
+  },
+  "homepage": "https://github.com/Kibalo454/WEB602W6D1HW#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "connect-ensure-login": "^0.1.1",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mongoose": "^6.8.0",
+    "passport": "^0.7.0",
+    "passport-local-mongoose": "^6.0.1"
+  }
+}

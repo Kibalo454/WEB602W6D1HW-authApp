@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Home</title>
+</head>
+<body>
+  <div class="message-box">
+    <h1 id="welcome-message"></h1>
+
+    <a href="/private">Proceed to Admin</a><br>
+    <a href="/logout">Log out</a>
+  </div>
+
+  <script>
+    const req = new XMLHttpRequest();
+    req.onreadystatechange = function() {
+      if (req.readyState === 4 && req.status === 200) {
+        const u = JSON.parse(req.responseText);
+        document.getElementById("welcome-message").innerText =
+          "Welcome " + u.username;
+      }
+    };
+    req.open("GET", "/user", true);
+    req.send();
+  </script>
+</body>
+</html>
