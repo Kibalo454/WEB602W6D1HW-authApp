@@ -22,6 +22,11 @@ app.use(
     secret: 'secret',
     resave: false,
     saveUninitialized: false,
+    rolling: true,
+    cookie: {
+      secure: false,
+      maxAge: 60* 1000 // 60 seconds
+    }
   })
 );
 
@@ -105,10 +110,9 @@ app.get('/logout', (req, res, next) => {
 
 /* ---------- SEED USERS (RUN ONCE) ---------- */
 
-// Run once to create users, then comment these out
-//User.register(new User({ username: 'paul' }), 'paul');
-//User.register(new User({ username: 'sarah' }), 'sarah');
-//User.register(new User({ username: 'john' }), 'john');
+// User.register(new User({ username: 'paul' }), 'paul');
+// User.register(new User({ username: 'sarah' }), 'sarah');
+// User.register(new User({ username: 'john' }), 'john');
 
 /* ---------- START SERVER ---------- */
 
